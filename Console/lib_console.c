@@ -24,3 +24,11 @@ void lib_print(const char* format, ...) {
 
 	Syscall(&data);
 }
+
+void lib_print_test(void)
+{
+	SyscallArgData data;
+	data.swiNumber = 'lib_print_test: Testmessage!';
+
+	Syscall(&data);
+}

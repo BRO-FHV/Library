@@ -11,9 +11,13 @@
 #define API_PRINTF_MAXLENGTH 255
 
 /**
- *
+ * Print function alias for standard printf
  */
 void lib_print(const char* format, ...);
 
+/**
+ * Print test function
+ */
+void lib_print_test(void);
 
 #endif /* CONSOLE_H_ */
