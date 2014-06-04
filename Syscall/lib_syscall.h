@@ -13,6 +13,7 @@
 #define LIB_SYSCALL_H_
 
 #define SYSCALL_STDIO_PRINTF 0
+#define SYSCALL_PRINTF_TEST 1
 
 typedef struct SyscallArg
 {

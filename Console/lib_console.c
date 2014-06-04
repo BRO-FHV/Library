@@ -19,7 +19,7 @@ void lib_print(const char* format, ...) {
 	va_end(args);
 
 	SyscallArgData data;
-	data.swiNumber = SYSCALL_STDIO_PRINTF;
+	data.swiNumber = SYSCALL_PRINTF;
 	data.arg1 = (uint32_t) & parsed;
 
 	Syscall(&data);
@@ -28,7 +28,7 @@ void lib_print(const char* format, ...) {
 void lib_print_test(void)
 {
 	SyscallArgData data;
-	data.swiNumber = 'lib_print_test: Testmessage!';
+	data.swiNumber = SYSCALL_PRINTF_TEST;
 
 	Syscall(&data);
 }
