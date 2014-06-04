@@ -8,10 +8,12 @@
 #ifndef CONSOLE_H_
 #define CONSOLE_H_
 
+#define API_PRINTF_MAXLENGTH 255
+
 /**
  *
  */
-void lib_print(char* text);
+void lib_print(const char* format, ...);
 
 
 #endif /* CONSOLE_H_ */

@@ -7,8 +7,12 @@
  * TODO
  */
 
+#include <inttypes.h>
+
 #ifndef LIB_SYSCALL_H_
 #define LIB_SYSCALL_H_
+
+#define SYSCALL_STDIO_PRINTF 0
 
 typedef struct SyscallArg
 {
