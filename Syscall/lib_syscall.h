@@ -13,17 +13,28 @@
 #define LIB_SYSCALL_H_
 
 #define SYSCALL_PRINTF 0
+
 #define SYSCALL_LED_ON_0 1
 #define SYSCALL_LED_ON_1 2
 #define SYSCALL_LED_ON_2 3
 #define SYSCALL_LED_ON_3 4
+
 #define SYSCALL_LED_OFF_0 5
 #define SYSCALL_LED_OFF_1 6
 #define SYSCALL_LED_OFF_2 7
 #define SYSCALL_LED_OFF_3 8
+
 #define SYSCALL_GPIO_DIR_SET 9
 #define SYSCALL_GPIO_PIN_WRITE 10
 #define SYSCALL_GPIO_PIN_READ 11
+
+#define SYSCALL_LED_INIT_LED_0 12
+#define SYSCALL_LED_INIT_LED_1 13
+#define SYSCALL_LED_INIT_LED_2 14
+#define SYSCALL_LED_INIT_LED_3 15
+
+#define SYSCALL_LED_INIT_REGISTER 16
+#define SYSCALL_LEDS_INIT 17
 
 
 
@@ -37,6 +48,8 @@ typedef struct SyscallArg
     uint32_t arg3;
     uint32_t arg4;
     uint32_t arg5;
+    uint32_t result;
+    uint32_t result2;
 } SyscallArgData;
 
 #pragma SWI_ALIAS(Syscall, 1)
