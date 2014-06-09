@@ -28,6 +28,9 @@
 #define SYSCALL_GPIO_PIN_WRITE 10
 #define SYSCALL_GPIO_PIN_READ 11
 
+/**
+ * Ideally already initialized by the kernel
+ */
 #define SYSCALL_LED_INIT_LED_0 12
 #define SYSCALL_LED_INIT_LED_1 13
 #define SYSCALL_LED_INIT_LED_2 14

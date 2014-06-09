@@ -46,4 +46,34 @@ void lib_led_off_2();
  */
 void lib_led_off_3();
 
+/**
+ * Init led 0
+ */
+void lib_led_init_0();
+
+/**
+ * Init led 1
+ */
+void lib_led_init_1();
+
+/**
+ * Init led 2
+ */
+void lib_led_init_2();
+
+/**
+ * Init led 3
+ */
+void lib_led_init_3();
+
+/**
+ * Init base registers for leds
+ */
+void lib_led_init_register();
+
+/**
+ * Inits register and all leds
+ */
+void lib_leds_init();
+
 #endif /* LIB_LED_H_ */
