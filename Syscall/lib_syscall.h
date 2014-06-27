@@ -51,6 +51,12 @@
 #define SYSCALL_UDP_HASDATA 22
 
 
+/*
+ * StdLib
+ */
+#define SYCALL_STDLIB_FREE 23
+#define SYCALL_STDLIB_MALLOC 24
+
 
 #define SYSCALL_PRINTF_TEST 100
 

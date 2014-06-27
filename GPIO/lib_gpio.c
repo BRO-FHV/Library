@@ -37,4 +37,6 @@ unsigned int lib_gpio_pin_read(unsigned int baseAdd, unsigned int pinNumber){
 	data.arg1 = baseAdd;
 	data.arg2 = pinNumber;
 	Syscall(&data);
+
+	return (unsigned int) data.result;
 }
