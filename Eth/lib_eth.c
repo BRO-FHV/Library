@@ -12,24 +12,22 @@
 #include "lib_eth.h"
 #include "../Syscall/lib_syscall.h"
 
-void SwiUdpInit(uint32_t port) {
+void lib_udp_init(uint32_t port) {
 	SyscallArgData data;
 	data.swiNumber = SYSCALL_UDP_INIT;
 	data.arg1 = port;
 	Syscall(&data);
 }
 
-swi_udp_package_t* SwiUdpGetData(uint32_t port) {
+lib_udp_package_t* lib_udp_get_data(uint32_t port) {
 	SyscallArgData data;
 	data.swiNumber = SYSCALL_UDP_GETDATA;
 	data.arg1 = port;
 	Syscall(&data);
 
-	return (swi_udp_package_t*) data.result;
+	return (lib_udp_package_t*) data.result;
 }
-void SwiUdpSendData(uint8_t receiver[], uint32_t port, uint8_t* data,
-		uint32_t datalen) {
-
+void lib_udp_send_data(uint8_t receiver[], uint32_t port, uint8_t* data, uint32_t datalen) {
 	SyscallArgData dataarg;
 	dataarg.swiNumber = SYSCALL_UDP_SENDDATA;
 	dataarg.arg1 = port;
@@ -39,7 +37,7 @@ void SwiUdpSendData(uint8_t receiver[], uint32_t port, uint8_t* data,
 	Syscall(&dataarg);
 }
 
-lib_boolean SwiUdpHasData(uint32_t port) {
+lib_boolean lib_udp_has_data(uint32_t port) {
 
 	SyscallArgData data;
 	data.swiNumber = SYSCALL_UDP_HASDATA;
